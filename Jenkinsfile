@@ -9,7 +9,7 @@ stages{
         sh "terraform init"
       }
     }
-   stage('terraform apply'){
+   stage('terraform deploy'){
       steps{
         sh "terraform apply --auto-approve"
       }
