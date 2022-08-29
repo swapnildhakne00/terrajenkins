@@ -9,9 +9,10 @@ stages{
         sh "terraform init"
       }
     }
+   stage('terraform apply'){
+      steps{
+        sh "terraform apply --auto-approve"
+      }
   }
-}
-def getTerraformPath(){
-  def tfVpc = tool name: 'terraform', type: 'terraform'
-  return tfVpc
+  }
 }
